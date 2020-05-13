@@ -16,14 +16,11 @@
         <pattern> * </pattern>
         <template>
             <think><set name= "username"> <star/></set></think>
-            Hi<get name= "username"/> :)  
-
-            Send 1 if you would like to place a new order
-            Send 2 if you would like to track/change your current order
-            Send 3 if you would like to record a complaint
+            Hi<get name= "username"/> :)
+            
+            How can I help you ?
         </template>
     </category>
-
 
     <category>
         <pattern>WHAT ARE YOU</pattern>
@@ -33,34 +30,167 @@
     </category>
 
 
-    <topic name = "new order">
+
     <category>
-        <pattern>1</pattern>
+        <pattern>PLACE</pattern>
         <template>
-            <set name = "topic">new order</set>
-            To place a new order please message the item code 
-            </template>
+            To place a new order please enter the product code (CODE XXX)
+        </template>
     </category>
 
-        <category>
-            <pattern> * </pattern>
-            <template>
-                <srai>Order confirmed : <star/></srai>
-                Please provide your mobile number : 
-            </template>
-        </category>
+    <category>
+        <pattern>CODE</pattern>
+        <template>
+            Item added to cart. If you would like to continue shopping enter another item code or send "buy now"
+        </template>
+    </category>
+    <category>
+        <pattern>BUY NOW</pattern>
+        <template>
+            Choose payment option - COD or Net banking
+        </template>
+    </category>
+    <category>
+        <pattern>COD</pattern>
+        <template>
+            Provide your home address (IND- )
+        </template>
+    </category>
+    <category>
+        <pattern>Net banking</pattern>
+        <template>
+            PLease visit https://isdc.nob to proceed with secure payment
+            Send payment id (PAY *****)
+        </template>
+    </category>
+    <category>
+        <pattern>PAY</pattern>
+        <template>
+            Provide your delivery address (IND *** )
+        </template>
+    </category>
+    <category>
+        <pattern>DONE</pattern>
+        <template>
+            Your order has been placed succesfully. Thank you for shopping 
+            <get name= "username"/> !!!
+        </template>
+    </category>
+    <category>
+        <pattern>IND *</pattern>
+        <template>
+            <srai>DONE</srai>
+        </template>
+    </category>
 
-        <category>
-            <pattern> * </pattern>
-            <template>
+    <category>
+        <pattern>CODE *</pattern>
+        <template>
+            <srai>CODE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>PAY *</pattern>
+        <template>
+            <srai>PAY</srai>
+        </template>
+    </category>
 
-                <srai> A message will be sent soon to <star/> confirming the order </srai>
-            </template>
-        </category>
-    </topic>
+
+    <category>
+        <pattern>TRACK</pattern>
+        <template>
+            To track an existing order enter the shipment id (SHIP XXX)
+        </template>
+    </category>
+    
+    <category>
+        <pattern>COMPLAINT</pattern>
+        <template> 
+            To make a complaint you can either email at xyz@idc.com or if you would like to talk to an employee please provide your phone no. (+91 _)
+        </template>
+    </category>
 
 
+    <category>
+        <pattern>_ PLACE</pattern>
+        <template>
+            <srai>PLACE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ PLACE</pattern>
+        <template>
+            <srai>PLACE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>PLACE *</pattern>
+        <template>
+            <srai>PLACE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ PLACE *</pattern>
+        <template>
+            <srai>PLACE</srai>
+        </template>
+    </category>
 
+    
+    <category>
+        <pattern>_ TRACK</pattern>
+        <template>
+            <srai>TRACK</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ TRACK</pattern>
+        <template>
+            <srai>TRACK</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>TRACK *</pattern>
+        <template>
+            <srai>TRACK</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ TRACK *</pattern>
+        <template>
+            <srai>TRACK</srai>
+        </template>
+    </category>
+
+    
+    <category>
+        <pattern>_ COMPLAINT</pattern>
+        <template>
+            <srai>COMPLAINT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ COMPLAINT</pattern>
+        <template>
+            <srai>COMPLAINT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>COMPLAINT *</pattern>
+        <template>
+            <srai>COMPLAINT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ COMPLAINT *</pattern>
+        <template>
+            <srai>COMPLAINT</srai>
+        </template>
+    </category>
+
+
+    
 
 
 
