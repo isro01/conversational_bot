@@ -8,7 +8,6 @@
                 <li> Well, Hello!!! </li>
                 <li> Hi there how may I help you?</li>
             </random>
-
             What's your name?
         </template>
     </category>
@@ -57,7 +56,7 @@
         </template>
     </category>
     <category>
-        <pattern>Net banking</pattern>
+        <pattern>NET BANKING</pattern>
         <template>
             PLease visit https://isdc.nob to proceed with secure payment
             Send payment id (PAY *****)
@@ -97,19 +96,73 @@
     </category>
 
 
+
+
     <category>
         <pattern>TRACK</pattern>
         <template>
-            To track an existing order enter the shipment id (SHIP XXX)
+            To track an existing order enter the shipment id (SHIP XXX).
         </template>
     </category>
-    
+    <category>
+        <pattern>SHIP</pattern>
+        <template>
+            Let me check. Here you go -> 
+            
+            <random>
+                <li> Your package has been dispatched. </li>
+                <li> Your package has been picked up by the delivery person. </li>
+                <li> Your package is waiting to be picked up for delivery. </li>
+            </random>
+
+            Will that be all?  (yes/no)
+        </template>
+    </category>
+
+    <category>
+        <pattern>SHIP *</pattern>
+        <template>
+            <srai>SHIP</srai>
+        </template>
+    </category>
+
+
+
+
     <category>
         <pattern>COMPLAINT</pattern>
         <template> 
             To make a complaint you can either email at xyz@idc.com or if you would like to talk to an employee please provide your phone no. (+91 _)
         </template>
     </category>
+    <category>
+        <pattern>+91 *</pattern>
+        <template>
+            <think><set name= "number"> <star/></set></think>
+            We would contact you soon on <get name ="number"/> . 
+
+            Will that be all?  (yes/no)
+        </template>
+    </category>
+
+
+
+
+    <category>
+        <pattern>YES</pattern>
+        <template>
+            Thank you for your time <get name = "username"/> :)
+            Bye!
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <template>
+            How may I help you ? 
+        </template>
+    </category>
+
+
 
 
     <category>
@@ -188,12 +241,6 @@
             <srai>COMPLAINT</srai>
         </template>
     </category>
-
-
-    
-
-
-
 
 
 </aiml>
