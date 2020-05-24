@@ -12,7 +12,7 @@
         </template>
     </category>
     <category>
-        <pattern> * </pattern>
+        <pattern>MY NAME IS * </pattern>
         <template>
             <think><set name= "username"> <star/></set></think>
             Hi<get name= "username"/> :)
@@ -132,11 +132,11 @@
     <category>
         <pattern>COMPLAINT</pattern>
         <template> 
-            To make a complaint you can either email at xyz@idc.com or if you would like to talk to an employee please provide your phone no. (+91 _)
+            To make a complaint you can either email at xyz@idc.com or if you would like to talk to an employee please provide your phone no. (call at) _)
         </template>
     </category>
     <category>
-        <pattern>+91 *</pattern>
+        <pattern>CALL AT *</pattern>
         <template>
             <think><set name= "number"> <star/></set></think>
             We would contact you soon on <get name ="number"/> . 
