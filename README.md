@@ -31,7 +31,7 @@ The bot ( after asking the name ) would able to interact if your sentence contai
 
 4. Speech Recognition : [speech_recog.ipynb](https://github.com/isro01/conversational_bot/blob/master/speech_recog_ctc.ipynb)
 
-5. Response Generation : Using [OpenSubtitiles](http://opus.nlpl.eu/OpenSubtitles-v2018.php) dataset and implementing encoder-decoder based model along with topic attention [Attention_model.ipynb](https://github.com/isro01/conversational_bot/blob/master/Attention_model_assignment.ipynb)
+5. Response Generation : Using [OpenSubtitiles](http://opus.nlpl.eu/OpenSubtitles-v2018.php) dataset, using pre trained Glove embeddings [here](https://nlp.stanford.edu/projects/glove/) and implementing encoder-decoder based model along with topic attention [Attention_model.ipynb](https://github.com/isro01/conversational_bot/blob/master/Attention_model_assignment.ipynb)
 
 ---
 
